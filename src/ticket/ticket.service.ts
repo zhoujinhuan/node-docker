@@ -5,8 +5,9 @@ import { Ticket } from './ticket.interface';
 export class TicketService {
     private readonly tickets: Ticket[] = [];
 
-      create(ticket: Ticket) {
-       return this.tickets.push(ticket);
+      create(ticket: Ticket) : string{
+       this.tickets.push(ticket);
+       return "the ticket have created already";
       }
 
     }

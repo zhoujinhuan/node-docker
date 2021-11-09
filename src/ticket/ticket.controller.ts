@@ -5,8 +5,8 @@ export class TicketController {
     constructor(private ticketService: TicketService){}
 
    @Post('/create')
-    create(@Body('ticket') ticket){
-    this.ticketService.create(ticket);
+    create(@Body('ticket') ticket) : string{
+    return this.ticketService.create(ticket);
     }
 
 }

@@ -15,4 +15,13 @@ describe('UserService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
+
+
+  test('test find all api',() => {
+    const result = service.findAll();
+    const user = [];
+    expect(result).toEqual(user);
+  });
+
+
 });

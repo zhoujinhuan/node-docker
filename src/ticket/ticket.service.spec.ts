@@ -15,4 +15,15 @@ describe('TicketService', () => {
   it('should be defined', () => {
     expect(service).toBeDefined();
   });
-});
+
+    const ticket = {
+    "name":"ticket2",
+     "id":2,
+     "detail":"ticket have been created"
+      };
+
+  test('create ticket ',() =>{
+    const result = service.create(ticket);
+    expect(result).toEqual('the ticket have created already');
+    });
+})
