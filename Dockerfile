@@ -1,12 +1,13 @@
 # syntax=docker/dockerfile:1
 FROM node:14.18.1-alpine As dev
 WORKDIR /app
-COPY ["package.json","package-lock", "./"]
-RUN npm install
+COPY ["package.json","package-lock.json*", "./"]
+RUN npm install --production
 COPY . .
 RUN npm run build
 
-#FROM node:14.18.1-alpine as production
+
+#FROM node:14.18.1-alpine as     production
 #
 #ARG NODE_ENV=production
 #ENV NODE_ENV=${NODE_ENV}
